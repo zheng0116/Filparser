@@ -19,7 +19,6 @@ Used for PDF document layout detection with following components:
  7: 'table_footnote',     # Table footnote
  8: 'isolate_formula',    # Display formula (this is a layout display formula, lower priority than 14)
  9: 'formula_caption',    # Display formula label
-
  13: 'inline_formula',    # Inline formula
  14: 'isolated_formula',  # Display formula
  15: 'ocr_text'}          # OCR result
