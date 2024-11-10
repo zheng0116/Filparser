@@ -1,0 +1,10 @@
+grpcio
+uvloop
+grpcio-tools
+matplotlib
+PyMuPDF
+ultralytics
+aiofiles
+paddlepaddle-gpu
+paddleocr==2.7.3
+pycocotools

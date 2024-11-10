@@ -1,0 +1,12 @@
+#file
+**/__pycache__/
+.vscode/
+rpc/*
+!rpc/__init__.py
+./bin
+./lib
+./include
+**/weights/
+./pip-selfcheck.json
+./pyvenv.cfg
+**/examples/

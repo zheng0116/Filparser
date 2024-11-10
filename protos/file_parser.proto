@@ -1,0 +1,51 @@
+// file_parser.proto
+syntax = "proto3";
+
+package file_parser;
+
+service FileParser {
+    rpc Parse(ParseRequest) returns (stream ParseResponse) {}
+}
+
+enum StorageType {
+    LOCAL = 0;
+    MINIO = 1;
+}
+
+message ParseRequest {
+    string file_path = 1;
+    StorageType storage_type = 2;
+    optional string minio_bucket = 3;  // For minio storage
+}
+
+message ParseResponse {
+    oneof chunk {
+        TextChunk text = 1;
+        ImageChunk image = 2;
+    }
+    repeated float bbox = 3;
+    PageInfo pageinfo = 4;
+    int32 bbox_num = 5;
+}
+
+message TextChunk {
+     string content = 1;
+}
+
+message ImageChunk {
+    string file_path = 1;  // Changed from file_id to file_path
+    ImageType class = 2;
+}
+
+enum ImageType {
+    FIGURE = 0;
+    TABLE = 1;
+    FORMULA = 2;
+}
+
+message PageInfo {
+    int32 width = 1;
+    int32 height = 2;
+    int32 page = 3;
+    int32 total = 4;
+}
