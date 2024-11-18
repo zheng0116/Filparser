@@ -1,10 +1,10 @@
 # Filparser
 <strong>[中文](./README_zh.md) |
     English</strong>
-## Overview
+## 🌟 Introduction
 Filparser is a powerful gRPC-based document parsing service that extracts structure and content from various document formats. It not only provides high-performance, scalable document analysis capabilities, but also supports intelligent document chunking based on layout analysis, directly providing high-quality text chunks for Retrieval-Augmented Generation (RAG) systems.
 
-## Models
+## 🚀 Models
 
 ### LayoutLMv3
 
